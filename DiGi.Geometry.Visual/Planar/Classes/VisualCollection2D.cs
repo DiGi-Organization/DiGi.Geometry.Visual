@@ -8,6 +8,7 @@ namespace DiGi.Geometry.Visual.Planar.Classes
     /// <summary>
     /// Represents a collection of 2D visual elements.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1010:Generic interface should also be implemented", Justification = "Serialized visual type: an added IEnumerable<T> would change how the DiGi serializer writes it.")]
     public class VisualCollection2D : VisualCollection<IVisual2D>
     {
         /// <summary>

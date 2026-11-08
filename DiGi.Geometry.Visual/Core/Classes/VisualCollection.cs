@@ -11,6 +11,7 @@ namespace DiGi.Geometry.Visual.Core.Classes
     /// Represents an abstract base class for a collection of visual elements.
     /// </summary>
     /// <typeparam name="T">The type of visual elements contained in the collection, which must implement <see cref="IVisual"/>.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1010:Generic interface should also be implemented", Justification = "Serialized visual type: an added IEnumerable<T> would change how the DiGi serializer writes it.")]
     public abstract class VisualCollection<T> : Visual, IVisualCollection<T> where T : IVisual
     {
         [JsonIgnore]
